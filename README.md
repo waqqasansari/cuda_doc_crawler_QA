@@ -11,7 +11,7 @@ A Python web crawler that extracts text and links from a given URL and saves the
 
 ### Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/webcrawler.git`
+1. Clone the repository: `git clone https://github.com/your-username/cuda_doc_crawler_QA.git`
 2. Install the required libraries: `pip install -r requirements.txt`
 
 ## Usage
