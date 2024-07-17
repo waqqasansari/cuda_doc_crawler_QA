@@ -37,11 +37,11 @@ class WebCrawler:
 
     def save_to_file(self, filename, parent_url, text_content, links):
         # Ensure 'data' folder exists
-        if not os.path.exists('data'):
-            os.makedirs('data')
+        if not os.path.exists('RAG_script/data'):
+            os.makedirs('RAG_script/data')
         
         # Construct the file path within the 'data' folder
-        filepath = os.path.join('data', filename)
+        filepath = os.path.join('RAG_script/data', filename)
         
         print(f"Saving to {filepath}...")
         with open(filepath, 'w', encoding='utf-8') as file:

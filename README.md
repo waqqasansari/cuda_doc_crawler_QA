@@ -31,7 +31,7 @@ The crawler can be configured using the following environment variables:
 
 ### Output
 
-The crawler saves the extracted text and links to files in the `data` directory. The filename is generated based on the URL and the sublink number.
+The crawler saves the extracted text and links to files in the `RAG_script/data` directory. The filename is generated based on the URL and the sublink number.
 
 ## License
 
