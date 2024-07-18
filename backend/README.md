@@ -15,16 +15,16 @@ This project implements a chatbot using Django REST framework. The chatbot uses 
 Before you begin, ensure you have met the following requirements:
 
 - Python 3.8+
+- Ubuntu >= 20.04 (x86_64)
 - pip (Python package manager)
-- Milvus server running (default: localhost:19530)
 - OpenAI API key
 
 ## Installation
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/django-chatbot-api.git
-   cd django-chatbot-api
+   git clone https://github.com/yourusername/cuda_doc_crawler_QA.git
+   cd backend/cuda_doc_chatbot
    ```
 
 2. Create a virtual environment and activate it:
@@ -56,7 +56,7 @@ Before you begin, ensure you have met the following requirements:
 
 ## Usage
 
-To interact with the chatbot, send a POST request to the `/api/chat/` endpoint with a JSON payload containing the user's input:
+To interact with the chatbot, send a POST request to the `http://localhost:8000/api/chat/` endpoint with a JSON payload containing the user's input:
 
 ```
 POST /api/chat/
@@ -74,17 +74,6 @@ The API will respond with a JSON object containing the chatbot's response:
     "ai_response": "The chatbot's response to your input"
 }
 ```
-
-## Project Structure
-
-- `chatbot/` - Main application directory
-  - `models.py` - Defines the ChatSession model
-  - `serializers.py` - Defines input and output serializers
-  - `views.py` - Contains the ChatbotView for handling requests
-  - `chatbot_logic.py` - Implements the core chatbot functionality
-  - `urls.py` - Defines URL routing for the chatbot API
-- `chatbot_project/` - Project configuration directory
-- `data/` - Directory for storing text files used by the chatbot
 
 ## Contributing
 

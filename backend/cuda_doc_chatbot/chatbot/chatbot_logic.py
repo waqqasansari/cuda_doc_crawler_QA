@@ -43,14 +43,6 @@ class ChatbotLogic:
         # self.milvus_lite_uri = f"sqlite:///{os.path.join(self.temp_dir, 'milvus_lite.db')}"
         self.milvus_lite_uri = "./chatbot/milvus_demo.db"
 
-        # self.flat_vectorstore = MilvusLite.from_documents(
-        #     documents=self.splits,
-        #     embedding=self.embeddings,
-        #     collection_name="flat_collection",
-        #     connection_args={"uri": self.milvus_lite_uri},
-        #     index_params={"metric_type": "L2", "index_type": "FLAT", "params": {}}
-        # )
-
         self.ivf_vectorstore = Milvus.from_documents(
             documents=self.splits,
             embedding=self.embeddings,
@@ -132,17 +124,6 @@ class ChatbotLogic:
         print(f"Loaded {len(documents)} documents")
         return documents
 
-    # def load_text_files(self, file_pattern):
-    #     print(file_pattern)
-    #     documents = []
-    #     for file_path in glob.glob(file_pattern):
-    #         print(file_path)
-    #         with open(file_path, 'r', encoding='utf-8') as file:
-    #             content = file.read()
-    #             print(content)
-    #             documents.append(content)
-    #     print('documents', documents)
-    #     return documents
 
     def get_session_history(self, session_id: str) -> BaseChatMessageHistory:
         if session_id not in self.store:

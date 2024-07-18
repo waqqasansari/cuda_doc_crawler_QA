@@ -1,6 +1,8 @@
 # WebCrawler
 
-A Python web crawler that extracts text and links from a given URL and saves them to files.
+A Python web crawler that extracts text and links from a given URL and saves them to files. After running this crawler, go to the `RAG_script/` directory, where you will find another README file with instructions on how to run the `RAG_qa.py` script.
+
+In the `backend` folder, the backend is complete. You can see the instructions in the README.
 
 ## Getting Started
 
@@ -20,7 +22,7 @@ A Python web crawler that extracts text and links from a given URL and saves the
 
 1. Run the crawler using: `python main.py`
 2. Provide the URL to crawl as an argument: `python main.py https://docs.nvidia.com/cuda/`
-3. Optionally, specify the output filename and maximum number of sublinks to crawl: `python main.py https://docs.nvidia.com/cuda/ output.txt 5`
+3. Optionally, specify the output filename and maximum number of sublinks to crawl: `python main.py https://docs.nvidia.com/cuda/ cuda_tookit.txt 5`
 
 ### Configuration
 

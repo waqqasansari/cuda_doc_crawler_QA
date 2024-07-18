@@ -41,14 +41,6 @@ class ChatbotLogic:
         # self.milvus_lite_uri = f"sqlite:///{os.path.join(self.temp_dir, 'milvus_lite.db')}"
         self.milvus_lite_uri = "./milvus_demo.db"
 
-        # self.flat_vectorstore = MilvusLite.from_documents(
-        #     documents=self.splits,
-        #     embedding=self.embeddings,
-        #     collection_name="flat_collection",
-        #     connection_args={"uri": self.milvus_lite_uri},
-        #     index_params={"metric_type": "L2", "index_type": "FLAT", "params": {}}
-        # )
-
         self.ivf_vectorstore = Milvus.from_documents(
             documents=self.splits,
             embedding=self.embeddings,
@@ -58,7 +50,6 @@ class ChatbotLogic:
         )
 
         print("Setting up retrievers...")
-        # self.flat_retriever = self.flat_vectorstore.as_retriever(search_kwargs={"k": 5})
         self.ivf_retriever = self.ivf_vectorstore.as_retriever(search_kwargs={"k": 5})
         self.bm25_retriever = BM25Retriever.from_documents(self.splits)
         self.bm25_retriever.k = 5

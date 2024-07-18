@@ -32,7 +32,7 @@ The main `ChatbotLogic` class is located in the `RAG_script/RAG_qa.py` file.
 
    ```
    git clone git clone https://github.com/your-username/cuda_doc_crawler_QA.git
-   cd RAG_qa
+   cd cuda_doc_crawler_QA/RAG_script
    ```
 
 2. Create a virtual environment:
