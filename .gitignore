@@ -2,3 +2,4 @@ myenv
 backend/*.myenv/
 **/myenv/
 backend/myenv
+.env
